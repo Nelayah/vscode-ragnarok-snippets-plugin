@@ -11,20 +11,26 @@
 	],
 	"activationEvents": [
     "onCommand:vscode-ragnarok-snippets-plugin.snippetsReact",
-    "onCommand:vscode-ragnarok-snippets-plugin.snippetsImport"
+    "onCommand:vscode-ragnarok-snippets-plugin.snippetsImport",
+    "onCommand:vscode-ragnarok-snippets-plugin.snippetsAntDesign"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
+      {
+				"command": "vscode-ragnarok-snippets-plugin.snippetsAntDesign",
+        "title": "Ant Design Snippets",
+        "category": "Snippets Management"
+      },
 			{
 				"command": "vscode-ragnarok-snippets-plugin.snippetsReact",
         "title": "React Snippets",
-        "category": "Snippets 代码块管理"
+        "category": "Snippets Management"
       },
       {
 				"command": "vscode-ragnarok-snippets-plugin.snippetsImport",
         "title": "Import Snippets",
-        "category": "Snippets 代码块管理"
+        "category": "Snippets Management"
 			}
 		]
 	},

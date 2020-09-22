@@ -7,14 +7,72 @@
     "ImportAnEntireModulesContents": false,
     "ImportingDefaults": false
   },
+  "Import useEffect from Hooks": {
+    "moduleName": "useEffect",
+    "dependency": "react"
+  },
+  "Import useMemo from Hooks": {
+    "moduleName": "useMemo",
+    "dependency": "react"
+  },
+  "Import useRef from Hooks": {
+    "moduleName": "useRef",
+    "dependency": "react"
+  },
+  "Import useState from Hooks": {
+    "moduleName": "useState",
+    "dependency": "react"
+  },
   "Import React from react": {
     "moduleName": "React",
     "dependency": "react",
     "ImportingDefaults": true
   },
+  "Import * as R from ramda": {
+    "moduleName": "R",
+    "dependency": "ramda",
+    "ImportAnEntireModulesContents": true
+  },
   "Import * as React from react": {
     "moduleName": "React",
     "dependency": "react",
     "ImportAnEntireModulesContents":true
+  },
+  "Import * as moment from moment": {
+    "moduleName": "moment",
+    "dependency": "moment",
+    "ImportAnEntireModulesContents": true
+  },
+  "Import useBoolean from ant ahooks": {
+    "moduleName": "useBoolean",
+    "dependency": "ahooks"
+  },
+  "Import Select from ant design": {
+    "moduleName": "Select",
+    "dependency": "antd"
+  },
+  "Import Input from ant design": {
+    "moduleName": "Input",
+    "dependency": "antd"
+  },
+  "Import Modal from ant design": {
+    "moduleName": "Modal",
+    "dependency": "antd"
+  },
+  "Import Form from ant design": {
+    "moduleName": "Form",
+    "dependency": "antd"
+  },
+  "Import TableProps from ant design typescript": {
+    "moduleName": "TableProps",
+    "dependency": "antd/lib/table"
+  },
+  "Import FormComponentProps from ant design typescript": {
+    "moduleName": "FormComponentProps",
+    "dependency": "antd/lib/form"
+  },
+  "Import WrappedFormUtils from ant design typescript": {
+    "moduleName": "WrappedFormUtils",
+    "dependency": "antd/lib/form/Form"
   }
 }

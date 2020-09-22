@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 
 const react = require('../snippets/react.json');
+const antd = require('../snippets/antd.json');
 const imports = require('../snippets/imports.json');
 
 const getEmptyLineNumber = () => {
@@ -10,7 +11,7 @@ const getEmptyLineNumber = () => {
 
   for (let lineNumber = 0; lineNumber < lineCount; lineNumber++) {
     let lineText = document.lineAt(lineNumber);
-    if (lineText.text.match(/\S|/g)) return lineNumber;
+    if (!lineText.text.match(/\w/g)) return lineNumber;
   }
 
   return 0;
@@ -36,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
         return {
           id: index,
           description: description || shortDescription,
-          label: title || value,
+          label: title || shortDescription || value,
           value,
           body,
           dependencies
@@ -44,6 +45,9 @@ export function activate(context: vscode.ExtensionContext) {
       }
     )
     const snippet: any = await vscode.window.showQuickPick(items, options);
+
+    if (!snippet) return;
+
     const activeTextEditor = vscode.window.activeTextEditor;
     const body = typeof snippet.body === 'string' ? snippet.body : snippet.body.join('\n');
 
@@ -52,6 +56,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsReact', () => {
     snippetsCommand(react);
+  }));
+
+  context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsAntDesign', () => {
+    snippetsCommand(antd);
   }));
 
   context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsImport', async () => {
@@ -89,6 +97,8 @@ export function activate(context: vscode.ExtensionContext) {
     )
     const snippet: any = await vscode.window.showQuickPick(items, options);
 
+    if (!snippet) return;
+
     const activeTextEditor = vscode.window.activeTextEditor;
     const {
       moduleName,
@@ -97,41 +107,44 @@ export function activate(context: vscode.ExtensionContext) {
       ImportingDefaults
     } = snippet;
     const edit: vscode.WorkspaceEdit = new vscode.WorkspaceEdit();
-    const DRegexp = new RegExp(`(?:import)(.|\\s)*{(.|\\s)*}(.|\\s)*(?:from)(.|\\s)*\\W(?:${dependency})(?:\'|\")`);
-    const MDRegexp = new RegExp(`(?:import)(.|\\s)*\\W(?:${moduleName})\\W(.|\\s)*(?:from)(.|\\s)*\\W(?:${dependency})(?:\'|\")`);
+    // es6 import regex
+    const MDRegexp = /import\s+?(?:(?:(?:[\w*\s{},]*)\s+from\s+?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
     let currentDoc = vscode.window.activeTextEditor?.document.getText();
     const document = vscode.window.activeTextEditor?.document as vscode.TextDocument;
-    const isExistImport = currentDoc?.match(MDRegexp);
+    const isExistImports = currentDoc?.match(MDRegexp);
     
+    const moduleNameRegEx = new RegExp(`(\\s|{)${moduleName}(\\s|})`);
+    const dependencyRegEx = new RegExp(`('|")${dependency}('|")`);
     // 导入模块已经存在
-    if (isExistImport && isExistImport.length > 0) return;
+    if (isExistImports && isExistImports.length > 0 && isExistImports.some(pattern => moduleNameRegEx.test(pattern) && dependencyRegEx.test(pattern))) return;
 
     // 依赖是否存在
-    const foundImport = currentDoc?.match(DRegexp);
+    const foundImport = isExistImports?.find(pattern => dependencyRegEx.test(pattern) && pattern.replace(/{|}/gi, '') !== pattern);
     
     // 依赖不存在，则创建导入语句
     if (!foundImport) {
       const emptyLineNumber = getEmptyLineNumber();
-      
+
       if (ImportingDefaults) {
-        return activeTextEditor?.insertSnippet(new vscode.SnippetString(`import ${moduleName} from "${dependency}";\n`), new vscode.Position(emptyLineNumber, 0));
+        return activeTextEditor?.insertSnippet(new vscode.SnippetString(`import ${moduleName} from '${dependency}';\n`), new vscode.Position(emptyLineNumber, 0));
       }
 
       if (ImportAnEntireModulesContents) {
-        return activeTextEditor?.insertSnippet(new vscode.SnippetString(`import * as ${moduleName} from "${dependency}";\n`), new vscode.Position(emptyLineNumber, 0));
+        return activeTextEditor?.insertSnippet(new vscode.SnippetString(`import * as ${moduleName} from '${dependency}';\n`), new vscode.Position(emptyLineNumber, 0));
       }
 
-      return activeTextEditor?.insertSnippet(new vscode.SnippetString(`import { ${moduleName} } from "${dependency}";\n`), new vscode.Position(emptyLineNumber, 0));
+      return activeTextEditor?.insertSnippet(new vscode.SnippetString(`import { ${moduleName} } from '${dependency}';\n`), new vscode.Position(emptyLineNumber, 0));
     }
 
     // 依赖存在，则改写导入语句
-    let nextImport = foundImport[0]
+    // @ts-ignore
+    let nextImport = foundImport
       .replace(/{|}|from|import|'|"|[^A-Za-z0-9_,]|;/gi, '')
       .replace(dependency, '')
       .split(',')
-      .concat(moduleName)
+      .concat(moduleName);
 
-    currentDoc = currentDoc?.replace(DRegexp, `import { ${nextImport.join(', ')} } from "${dependency}"`);
+    currentDoc = currentDoc?.replace(foundImport, `import { ${Array.from(new Set(nextImport)).join(', ')} } from '${dependency}';`);
 
     edit.replace(document.uri, new vscode.Range(new vscode.Position(0, 0), new vscode.Position(99999, 99999)), currentDoc as string);
     return vscode.workspace.applyEdit(edit);

@@ -6,22 +6,43 @@
       "import * as React from 'react';",
       "",
       "interface IAppProps {}",
+      "",
       "const Component: React.FC<IAppProps> = props => {",
       "\treturn (",
       "\t\t<div>$2</div>",
       "\t);",
       "};",
       "Component.displayName = '$1';",
+      "",
       "export default Component;"
 		]
   },
-  "React hooks": {
-    "title": "React Hooks useCallback",
+  "React Hooks useCallback": {
     "prefix": "rhuc",
 		"body": [
       "const $1 = useCallback(() => {",
       "\t$2",
       "}, []);"
+		]
+  },
+  "React Hooks useRef": {
+    "prefix": "rhur",
+		"body": [
+      "const $1 = useRef($2);"
+		]
+  },
+  "React Hooks useState": {
+    "prefix": "rhus",
+		"body": [
+      "const [$1, set$2] = useState<$3>($4);"
+		]
+  },
+  "React Hooks useEffect": {
+    "prefix": "rhue",
+		"body": [
+      "useEffect(() => {",
+      "\t$1",
+      "}, []);\n"
 		]
   }
 }
