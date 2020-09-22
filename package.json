@@ -3,7 +3,7 @@
 	"displayName": "vscode-ragnarok-snippets-plugin",
 	"description": "some snippets",
 	"version": "0.0.1",
-	"publisher": "vscode-ragnarok-snippets-plugin",
+  "publisher": "vsonic",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
