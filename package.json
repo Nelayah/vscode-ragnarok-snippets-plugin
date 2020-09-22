@@ -1,9 +1,9 @@
 {
 	"name": "vscode-ragnarok-snippets-plugin",
 	"displayName": "vscode-ragnarok-snippets-plugin",
-	"description": "some snippets",
+	"description": "Provide useful snippets in Visual Studio Code",
 	"version": "0.0.1",
-  "publisher": "vsonic",
+	"publisher": "vsonic",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -40,11 +40,11 @@
 		"pretest": "npm run compile && npm run lint",
 		"test": "node ./out/test/runTest.js",
 		"version": "standard-version -- --release-as"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Nelayah/vscode-ragnarok-snippets-plugin.git"
-  },
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Nelayah/vscode-ragnarok-snippets-plugin.git"
+	},
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.0.0",
@@ -76,5 +76,11 @@
 	},
 	"dependencies": {
 		"vscode-nls": "^5.0.0"
+  },
+  "icon": "images/icon.png",
+	"__metadata": {
+		"id": "77aa1841-7cf6-4846-8afb-3e7d092da2c5",
+		"publisherDisplayName": "vsonic",
+		"publisherId": "b27363ba-5309-4035-bf11-927d8342442c"
 	}
 }
