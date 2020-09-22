@@ -2,7 +2,7 @@
 	"name": "vscode-ragnarok-snippets-plugin",
 	"displayName": "vscode-ragnarok-snippets-plugin",
 	"description": "Provide useful snippets in Visual Studio Code",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "vsonic",
 	"engines": {
 		"vscode": "^1.49.0"
@@ -76,8 +76,8 @@
 	},
 	"dependencies": {
 		"vscode-nls": "^5.0.0"
-  },
-  "icon": "images/icon.png",
+	},
+	"icon": "images/icon.png",
 	"__metadata": {
 		"id": "77aa1841-7cf6-4846-8afb-3e7d092da2c5",
 		"publisherDisplayName": "vsonic",
