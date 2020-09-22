@@ -1,0 +1,27 @@
+{
+  "React function component": {
+    "title": "React 函数组件",
+		"prefix": "tfc",
+		"body": [
+      "import * as React from 'react';",
+      "",
+      "interface IAppProps {}",
+      "const Component: React.FC<IAppProps> = props => {",
+      "\treturn (",
+      "\t\t<div>$2</div>",
+      "\t);",
+      "};",
+      "Component.displayName = '$1';",
+      "export default Component;"
+		]
+  },
+  "React hooks": {
+    "title": "React Hooks useCallback",
+    "prefix": "rhuc",
+		"body": [
+      "const $1 = useCallback(() => {",
+      "\t$2",
+      "}, []);"
+		]
+  }
+}

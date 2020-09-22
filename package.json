@@ -10,14 +10,21 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vscode-ragnarok-snippets-plugin.helloWorld"
+    "onCommand:vscode-ragnarok-snippets-plugin.snippetsReact",
+    "onCommand:vscode-ragnarok-snippets-plugin.snippetsImport"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vscode-ragnarok-snippets-plugin.helloWorld",
-				"title": "Hello World"
+				"command": "vscode-ragnarok-snippets-plugin.snippetsReact",
+        "title": "React Snippets",
+        "category": "Snippets 代码块管理"
+      },
+      {
+				"command": "vscode-ragnarok-snippets-plugin.snippetsImport",
+        "title": "Import Snippets",
+        "category": "Snippets 代码块管理"
 			}
 		]
 	},

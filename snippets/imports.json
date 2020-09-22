@@ -1,0 +1,20 @@
+
+{
+  "Import useCallback from Hooks": {
+    "moduleName": "useCallback",
+    "dependency": "react",
+    "ImportExportsFromModule": true,
+    "ImportAnEntireModulesContents": false,
+    "ImportingDefaults": false
+  },
+  "Import React from react": {
+    "moduleName": "React",
+    "dependency": "react",
+    "ImportingDefaults": true
+  },
+  "Import * as React from react": {
+    "moduleName": "React",
+    "dependency": "react",
+    "ImportAnEntireModulesContents":true
+  }
+}
