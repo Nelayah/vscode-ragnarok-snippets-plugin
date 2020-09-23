@@ -1,5 +1,38 @@
 {
   "Ant design Typescript Form": {
+    "title": "Ant design 表单",
+		"prefix": "anmf",
+    "body": [
+      "import * as React from 'react';",
+      "import { FormComponentProps } from 'antd/lib/form';",
+      "import { Form } from 'antd';",
+      "",
+      "interface IAppProps extends FormComponentProps<any> {}",
+      "",
+      "const Component: React.FC<IAppProps> = props => {",
+      "\tconst {form} = props;",
+      "",
+      "\treturn (",
+      "\t\t<Form></Form>",
+      "\t);",
+      "};",
+      "Component.displayName = '';",
+      "",
+      "export default Form.create<IAppProps>()(Component);"
+    ]
+  },
+  "Ant design Typescript Form validate": {
+    "title": "Ant design 表单验证",
+		"prefix": "anmfv",
+    "body": [
+      "form.validateFields((err, value) => {",
+      "\tif (err) return;",
+      "",
+      "\tconsole.log('value', value);",
+      "});"
+    ]
+  },
+  "Ant design Typescript Modal Form": {
     "title": "Ant design 弹窗表单",
 		"prefix": "anmfc",
 		"body": [
@@ -51,5 +84,19 @@
       "",
       "export default Form.create<IAppProps>()(Component);"
 		]
+  },
+  "Table Columns": {
+    "title": "Ant design table columns 实例",
+    "prefix": "adtc",
+    "body": [
+      "const columns: ColumnProps<any>[] = [$1]"
+    ]
+  },
+  "Button": {
+    "title": "Ant design button 实例",
+    "prefix": "adb",
+    "body": [
+      "<Button>$1</Button>"
+    ]
   }
 }

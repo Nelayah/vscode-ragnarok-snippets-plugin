@@ -47,6 +47,11 @@
     "moduleName": "useBoolean",
     "dependency": "ahooks"
   },
+  "Import useSWR from swr": {
+    "moduleName": "useSWR",
+    "dependency": "swr",
+    "ImportingDefaults": true
+  },
   "Import Select from ant design": {
     "moduleName": "Select",
     "dependency": "antd"
@@ -62,6 +67,34 @@
   "Import Form from ant design": {
     "moduleName": "Form",
     "dependency": "antd"
+  },
+  "Import Button from ant design": {
+    "moduleName": "Button",
+    "dependency": "antd"
+  },
+  "Import Tabs from ant design": {
+    "moduleName": "Tabs",
+    "dependency": "antd"
+  },
+  "Import Table from ant design": {
+    "moduleName": "Table",
+    "dependency": "antd"
+  },
+  "Import Card from ant design": {
+    "moduleName": "Card",
+    "dependency": "antd"
+  },
+  "Import List from ant design": {
+    "moduleName": "List",
+    "dependency": "antd"
+  },
+  "Import ModalProps from ant design typescript": {
+    "moduleName": "ModalProps",
+    "dependency": "antd/lib/modal"
+  },
+  "Import ColumnProps from ant design typescript": {
+    "moduleName": "ColumnProps",
+    "dependency": "antd/lib/table"
   },
   "Import TableProps from ant design typescript": {
     "moduleName": "TableProps",
