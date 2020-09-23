@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 
 const react = require('../snippets/react.json');
 const antd = require('../snippets/antd.json');
+const regexps = require('../snippets/regexps.json');
 const imports = require('../snippets/imports.json');
 
 const getEmptyLineNumber = () => {
@@ -31,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
     const snippetsArray = Object.entries(tpl);
     const items = snippetsArray.map(
       ([shortDescription, content], index) => {
-        const { title, prefix, body, description, dependencies } = content as any;
+        const { title, prefix = "", body, description, dependencies } = content as any;
         const value = typeof prefix === 'string' ? prefix : prefix[0]
 
         return {
@@ -60,6 +61,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsAntDesign', () => {
     snippetsCommand(antd);
+  }));
+
+  context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsRegexp', () => {
+    snippetsCommand(regexps);
   }));
 
   context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsImport', async () => {

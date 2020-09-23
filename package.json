@@ -13,7 +13,8 @@
 	"activationEvents": [
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsReact",
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsImport",
-		"onCommand:vscode-ragnarok-snippets-plugin.snippetsAntDesign"
+		"onCommand:vscode-ragnarok-snippets-plugin.snippetsAntDesign",
+		"onCommand:vscode-ragnarok-snippets-plugin.snippetsRegexp"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -29,6 +30,10 @@
 			{
 				"command": "vscode-ragnarok-snippets-plugin.snippetsImport",
 				"title": "%vscode-ragnarok-snippets-plugin.snippetsImport.title%"
+			},
+			{
+				"command": "vscode-ragnarok-snippets-plugin.snippetsRegexp",
+				"title": "%vscode-ragnarok-snippets-plugin.snippetsRegexp.title%"
 			}
 		]
 	},

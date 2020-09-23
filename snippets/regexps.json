@@ -1,0 +1,50 @@
+{
+  "Positive Integer": {
+    "title": "正整数",
+		"body": [ "/^[1-9]\\d*$/" ]
+  },
+  "Negative Integer": {
+    "title": "负整数",
+		"body": [ "/^-[1-9]\\d*$/" ]
+  },
+  "Integer": {
+    "title": "整数",
+		"body": [ "/^-?[1-9]\\d*$/" ]
+  },
+  "Non-negative Integer": {
+    "title": "非负整数（正整数 + 0）",
+		"body": [ "/^[1-9]\\d*|0$/" ]
+  },
+  "Non-positive Integer": {
+    "title": "非正整数（负整数 + 0）",
+		"body": [ "/^-[1-9]\\d*|0$/" ]
+  },
+  "Positive Floating Point": {
+    "title": "正浮点数",
+		"body": [ "/^[1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*$/" ]
+  },
+  "Negative Floating Point": {
+    "title": "负浮点数",
+		"body": [ "/^-([1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*)$/" ]
+  },
+  "Floating Point": {
+    "title": "浮点数",
+		"body": [ "/^-?([1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*|0?\\.0+|0)$/" ]
+  },
+  "Non-negative Floating Point": {
+    "title": "负浮点数（正浮点数 + 0）",
+		"body": [ "/^[1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*|0?\\.0+|0$/" ]
+  },
+  "Non-positive Floating Point": {
+    "title": "非正浮点数（负浮点数 + 0）",
+		"body": [ "/^(-([1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*))|0?\\.0+|0$/" ]
+  },
+  "Chinese": {
+    "title": "中文",
+		"body": [ "/^[\u4e00-\u9fa5]{0,}$/" ]
+  },
+  "Email": {
+    "title": "电子邮箱",
+		"body": [ "/^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$/" ]
+  }
+}
