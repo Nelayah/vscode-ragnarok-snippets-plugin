@@ -14,7 +14,8 @@
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsReact",
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsImport",
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsAntDesign",
-		"onCommand:vscode-ragnarok-snippets-plugin.snippetsRegexp"
+    "onCommand:vscode-ragnarok-snippets-plugin.snippetsRegexp",
+    "onCommand:vscode-ragnarok-snippets-plugin.snippetsAHooks"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -34,6 +35,10 @@
 			{
 				"command": "vscode-ragnarok-snippets-plugin.snippetsRegexp",
 				"title": "%vscode-ragnarok-snippets-plugin.snippetsRegexp.title%"
+			},
+			{
+				"command": "vscode-ragnarok-snippets-plugin.snippetsAHooks",
+				"title": "%vscode-ragnarok-snippets-plugin.snippetsAHooks.title%"
 			}
 		]
 	},

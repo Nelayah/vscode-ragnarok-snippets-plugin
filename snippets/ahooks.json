@@ -1,0 +1,8 @@
+{
+  "useBoolean": {
+    "title": "useBoolean default usage",
+		"body": [
+      "const [$1, {setTrue: $2, setFalse: $3}] = useBoolean(false);" 
+    ]
+  }
+}

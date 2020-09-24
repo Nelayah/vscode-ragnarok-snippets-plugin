@@ -1,6 +1,7 @@
 {
 	"vscode-ragnarok-snippets-plugin.snippetsImport.title": "代码块管理：Import 相关代码块",
-	"vscode-ragnarok-snippets-plugin.snippetsAntDesign.title": "代码块管理：Ant Design 相关代码块",
+	"vscode-ragnarok-snippets-plugin.snippetsAntDesign.title": "代码块管理：Ant Design 相关代码块(V3)",
 	"vscode-ragnarok-snippets-plugin.snippetsReact.title": "代码块管理：React 相关代码块",
-	"vscode-ragnarok-snippets-plugin.snippetsRegexp.title": "代码块管理：正则表达式 相关代码块"
+	"vscode-ragnarok-snippets-plugin.snippetsRegexp.title": "代码块管理：正则表达式 相关代码块",
+	"vscode-ragnarok-snippets-plugin.snippetsAHooks.title": "代码块管理：AHooks 相关代码块"
 }

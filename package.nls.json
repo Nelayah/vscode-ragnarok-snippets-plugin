@@ -2,5 +2,6 @@
   "vscode-ragnarok-snippets-plugin.snippetsImport.title": "Snippets Management: Import Snippets",
   "vscode-ragnarok-snippets-plugin.snippetsAntDesign.title": "Snippets Management: Ant Design Snippets",
   "vscode-ragnarok-snippets-plugin.snippetsReact.title": "Snippets Management: React Snippets" ,
-  "vscode-ragnarok-snippets-plugin.snippetsRegexp.title": "Snippets Management: Regexp Snippets" 
+  "vscode-ragnarok-snippets-plugin.snippetsRegexp.title": "Snippets Management: Regexp Snippets",
+  "vscode-ragnarok-snippets-plugin.snippetsAHooks.title": "Snippets Management: AHooks Snippets"
 }

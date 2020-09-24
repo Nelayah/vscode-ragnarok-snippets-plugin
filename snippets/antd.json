@@ -7,6 +7,8 @@
       "import { FormComponentProps } from 'antd/lib/form';",
       "import { Form } from 'antd';",
       "",
+      "const {Item: FormItem} = Form;",
+      "",
       "interface IAppProps extends FormComponentProps<any> {}",
       "",
       "const Component: React.FC<IAppProps> = props => {",
@@ -30,6 +32,26 @@
       "",
       "\tconsole.log('value', value);",
       "});"
+    ]
+  },
+  "Ant design Typescript FormItem": {
+    "title": "Ant design 表单字段",
+		"prefix": "anmfi",
+    "body": [
+      "<FormItem label=\"$1\">",
+      "\t{form.getFieldDecorator('$2')($3)}",
+      "</FormItem>"
+    ]
+  },
+  "Ant design Typescript FormItem Required Rules": {
+    "title": "Ant design 表单字段必填",
+		"prefix": "anmfirr",
+    "body": [
+      "{",
+      "\trules: [",
+      "\t\t{required: true, message: '必填'}",
+      "\t]",
+      "}"
     ]
   },
   "Ant design Typescript Modal Form": {

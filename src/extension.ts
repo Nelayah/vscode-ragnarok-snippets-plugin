@@ -4,6 +4,7 @@ const react = require('../snippets/react.json');
 const antd = require('../snippets/antd.json');
 const regexps = require('../snippets/regexps.json');
 const imports = require('../snippets/imports.json');
+const ahooks = require('../snippets/ahooks.json');
 
 const getEmptyLineNumber = () => {
   const document = vscode.window.activeTextEditor?.document as vscode.TextDocument;
@@ -65,6 +66,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsRegexp', () => {
     snippetsCommand(regexps);
+  }));
+
+  context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsAHooks', () => {
+    snippetsCommand(ahooks);
   }));
 
   context.subscriptions.push(vscode.commands.registerCommand('vscode-ragnarok-snippets-plugin.snippetsImport', async () => {
