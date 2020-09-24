@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.5](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.4...v0.0.5) (2020-09-24)
 
+- 补充 antd v3 组件导出
+
 ### [0.0.4](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.3...v0.0.4) (2020-09-24)
 
 ### [0.0.3](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.2...v0.0.3) (2020-09-23)
