@@ -2,7 +2,7 @@
 	"name": "vscode-ragnarok-snippets-plugin",
 	"displayName": "vscode-ragnarok-snippets-plugin",
 	"description": "Provide useful snippets in Visual Studio Code",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "vsonic",
 	"engines": {
 		"vscode": "^1.49.0"
@@ -14,8 +14,8 @@
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsReact",
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsImport",
 		"onCommand:vscode-ragnarok-snippets-plugin.snippetsAntDesign",
-    "onCommand:vscode-ragnarok-snippets-plugin.snippetsRegexp",
-    "onCommand:vscode-ragnarok-snippets-plugin.snippetsAHooks"
+		"onCommand:vscode-ragnarok-snippets-plugin.snippetsRegexp",
+		"onCommand:vscode-ragnarok-snippets-plugin.snippetsAHooks"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
