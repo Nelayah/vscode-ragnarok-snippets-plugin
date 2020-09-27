@@ -304,6 +304,10 @@
     "moduleName": "Divider",
     "dependency": "antd"
   },
+  "Import RouteComponentProps from react-router-dom": {
+    "moduleName": "RouteComponentProps",
+    "dependency": "react-router-dom"
+  },
   "Import ModalProps from ant design v3 typescript": {
     "moduleName": "ModalProps",
     "dependency": "antd/lib/modal"
