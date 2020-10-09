@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.7...v0.0.8) (2020-10-09)
+
+
+### Bug Fixes
+
+* fix multiple export problem ([27751fa](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/commit/27751fa22abc5605fbc329d65da21a7d5dad74e4))
+
 ### [0.0.7](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.6...v0.0.7) (2020-10-09)
 
 
