@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.6...v0.0.7) (2020-10-09)
+
+
+### Bug Fixes
+
+* fix regexp string issue ([e09d5a3](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/commit/e09d5a3f01a6d0349a9e45138ae1782f76e84d4d))
+
 ### [0.0.6](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.5...v0.0.6) (2020-09-24)
 
 ### [0.0.5](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.4...v0.0.5) (2020-09-24)
