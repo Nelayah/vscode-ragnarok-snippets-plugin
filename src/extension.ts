@@ -149,8 +149,8 @@ export function activate(context: vscode.ExtensionContext) {
     // 依赖存在，则改写导入语句
     // @ts-ignore
     let nextImport = foundImport
-      .replace(/{|}|from|import|'|"|[^A-Za-z0-9_,]|;/gi, '')
       .replace(dependency, '')
+      .replace(/{|}|from|import|'|"|[^A-Za-z0-9_,]|;/gi, '')
       .split(',')
       .concat(moduleName);
 
