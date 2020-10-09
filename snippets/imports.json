@@ -324,6 +324,10 @@
     "moduleName": "FormComponentProps",
     "dependency": "antd/lib/form"
   },
+  "Import FormItemProps from ant design v3 typescript": {
+    "moduleName": "FormItemProps",
+    "dependency": "antd/lib/form"
+  },
   "Import WrappedFormUtils from ant design v3 typescript": {
     "moduleName": "WrappedFormUtils",
     "dependency": "antd/lib/form/Form"
