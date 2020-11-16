@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.9](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.8...v0.0.9) (2020-11-16)
 
+- 支持 ahooks 所有导出
+
 ### [0.0.8](https://github.com/Nelayah/vscode-ragnarok-snippets-plugin/compare/v0.0.7...v0.0.8) (2020-10-09)
 
 
