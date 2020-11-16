@@ -4,5 +4,11 @@
 		"body": [
       "const [$1, {setTrue: $2, setFalse: $3}] = useBoolean(false);" 
     ]
+  },
+  "useRequest": {
+    "title": "useRequest default usage",
+		"body": [
+      "const { data, error, loading } = useRequest($1);" 
+    ]
   }
 }
